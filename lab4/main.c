@@ -1,11 +1,14 @@
 #include <stdio.h>
 void replace_all(char* str, char oldChar, char newChar)
 {
-    if (* str==oldChar)
+    while (* str!='\0')
     {
-        * str= newChar;
+        if (* str==oldChar)
+        {
+            * str= newChar;
+        }
+        str++;
     }
-    str++;
 }
 
 int main()
